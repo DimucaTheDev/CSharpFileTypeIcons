@@ -1,0 +1,31 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>pw.cmdev.dimucathedev.csharp-filetype-icons</id>
+    <version>1.0.0</version>
+    <name>C# File Type Icons</name>
+    <vendor>DimucaTheDev</vendor>
+    <description><![CDATA[
+    <p>Shows a different icon for each C# file in Rider, depending on the type it declares, the same way IntelliJ IDEA does for Java files.</p>
+    <p>No more rows of identical <code>.cs</code> icons: you can tell classes, interfaces and enums apart at a glance.</p>
+    <img src="https://github.com/DimucaTheDev/CSharpFileTypeIcons/master/docs/showcase.png"/>
+    <h3>What it recognizes</h3>
+    <ul>
+        <li>Classes, abstract classes, interfaces, enums, structs, records and delegates</li>
+        <li>Exceptions, attributes and controllers (detected by name or base type)</li>
+        <li>DTOs, entities, models and services (detected by name suffix)</li>
+        <li>Files with several top-level types</li>
+        <li>Entry points such as <code>Program.cs</code>, and <code>GlobalUsings.cs</code> files</li>
+    </ul>
+    <h3>Markers</h3>
+    <p>Icons get small overlay markers for <code>static</code> and <code>sealed</code> classes, test classes (NUnit, MSTest, xUnit) and classes that contain <code>Main</code>.</p>
+    <h3>How it works</h3>
+    <p>The plugin reads the beginning of each file and detects the declared type with lightweight text analysis, without running a full code analysis, so it stays fast. Rare edge cases may get a generic class icon.</p>
+]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.rider</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileIconPatcher implementation="pw.cmdev.dimucathedev.ridersharpicons.CsFileIconPatcher"/>
+    </extensions>
+</idea-plugin>
