@@ -7,7 +7,7 @@
     <description><![CDATA[
     <p>Shows a different icon for each C# file in Rider, depending on the type it declares, the same way IntelliJ IDEA does for Java files.</p>
     <p>No more rows of identical <code>.cs</code> icons: you can tell classes, interfaces and enums apart at a glance.</p>
-    <img src="https://github.com/DimucaTheDev/CSharpFileTypeIcons/master/docs/showcase.png"/>
+    <img src="https://github.com/DimucaTheDev/CSharpFileTypeIcons/blob/master/docs/showcase.png?raw=true"/>
     <h3>What it recognizes</h3>
     <ul>
         <li>Classes, abstract classes, interfaces, enums, structs, records and delegates</li>
